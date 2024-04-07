@@ -2594,3 +2594,17 @@ INSERT INTO `ums_role_resource_relation` VALUES ('221', '1', '23');
 INSERT INTO `ums_role_resource_relation` VALUES ('222', '1', '24');
 INSERT INTO `ums_role_resource_relation` VALUES ('223', '1', '31');
 INSERT INTO `ums_role_resource_relation` VALUES ('224', '1', '32');
+
+DROP TABLE IF EXISTS `alipay_order`;
+CREATE TABLE `alipay_order` (
+                                `id` bigint(20) NOT NULL AUTO_INCREMENT,
+                                `order_id` varchar(64) NOT NULL COMMENT '订单ID',
+                                `subject` varchar(255) DEFAULT NULL COMMENT '订单标题/商品标题/交易标题',
+                                `total_amount` decimal(10,2) DEFAULT NULL COMMENT '订单总金额',
+                                `trade_status` varchar(255) DEFAULT NULL COMMENT '交易状态',
+                                `trade_no` varchar(255) DEFAULT NULL COMMENT '支付宝交易号',
+                                `buyer_id` varchar(255) DEFAULT NULL COMMENT '买家支付宝账号',
+                                `gmt_payment` datetime DEFAULT NULL COMMENT '交易付款时间',
+                                `buyer_pay_amount` decimal(10,2) DEFAULT NULL COMMENT '用户在交易中支付的金额',
+                                PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='支付宝支付订单表';

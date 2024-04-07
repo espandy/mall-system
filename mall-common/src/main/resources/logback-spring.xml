@@ -73,7 +73,7 @@
                 <pattern>
                     <pattern>
                         {
-                        "project": "mall-swarm",
+                        "project": "mall-system",
                         "level": "%level",
                         "service": "${APP_NAME:-}",
                         "pid": "${PID:-}",
@@ -111,7 +111,7 @@
                 <pattern>
                     <pattern>
                         {
-                        "project": "mall-swarm",
+                        "project": "mall-system",
                         "level": "%level",
                         "service": "${APP_NAME:-}",
                         "pid": "${PID:-}",
@@ -144,7 +144,7 @@
                 <pattern>
                     <pattern>
                         {
-                        "project": "mall-swarm",
+                        "project": "mall-system",
                         "level": "%level",
                         "service": "${APP_NAME:-}",
                         "pid": "${PID:-}",
@@ -177,7 +177,7 @@
                 <pattern>
                     <pattern>
                         {
-                        "project": "mall-swarm",
+                        "project": "mall-system",
                         "level": "%level",
                         "service": "${APP_NAME:-}",
                         "class": "%logger",
@@ -203,7 +203,7 @@
     <logger name="org.hibernate.validator" level="INFO"/>
     <logger name="com.alibaba.nacos.client.naming" level="INFO"/>
 
-    <root level="DEBUG">
+    <root>
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE_DEBUG"/>
         <appender-ref ref="FILE_ERROR"/>
